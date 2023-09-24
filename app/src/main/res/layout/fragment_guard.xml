@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuardFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+
+        android:id="@+id/security_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/pink_card"
+        app:cardBackgroundColor="#FF3659"
+        app:cardElevation="16dp"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="16dp"
+
+        ></com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+        android:id="@+id/sos_text"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        android:elevation="17dp"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="In Case of Emerngency Tellin Family Members to Contact on Given Location!"
+        android:id="@+id/sos_message"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/sos_text"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintEnd_toEndOf="@id/pink_card"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/sos_image"
+        android:elevation="17dp"/>
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_margin="16dp"
+        android:id="@+id/sos_image"
+        android:src="@drawable/help"
+        app:layout_constraintEnd_toEndOf="@id/pink_card"
+        android:elevation="17dp"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        app:layout_constraintBottom_toBottomOf="@id/pink_card"
+
+        android:layout_height="96dp"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintTop_toBottomOf="@id/pink_card"
+        android:id="@+id/green_card"
+        app:cardBackgroundColor="@color/teal_200"
+        android:layout_margin="16dp"
+        android:elevation="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="16dp"
+
+        >
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Guard"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+        android:id="@+id/guard_text"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        app:layout_constraintTop_toTopOf="@id/green_card"
+        android:elevation="17dp"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="In Case of Emerngency Tellin Family Members to Contact on Given Location!"
+        android:id="@+id/guard_message"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/guard_text"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        app:layout_constraintEnd_toEndOf="@id/green_card"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guard_image"
+        android:elevation="4dp"/>
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_margin="@dimen/dimen_16"
+        android:id="@+id/guard_image"
+        android:src="@drawable/help"
+        app:layout_constraintEnd_toEndOf="@id/green_card"
+        android:elevation="2dp"
+        app:layout_constraintTop_toTopOf="@id/green_card"
+        app:layout_constraintBottom_toBottomOf="@id/green_card"
+        android:layout_height="96dp"/>
+
+    <EditText
+        android:id="@+id/invite_mail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:hint="Enter Email of whom you want to invite"
+        app:layout_constraintBottom_toBottomOf="@id/send_invite"
+        app:layout_constraintEnd_toStartOf="@id/send_invite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/send_invite" />
+
+    <Button
+        android:id="@+id/send_invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Invite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/green_card" />
+
+    <TextView
+        android:id="@+id/your_invites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:text="Your Invites : "
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_16_sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invite_mail" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invite_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dimen_16"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_invites"
+        tools:listitem="@layout/item_invite_mail"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
